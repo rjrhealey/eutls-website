@@ -30,6 +30,9 @@ logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 site_url: https://tangerine-unicorn-156050.netlify.app
 display_url: https://tangerine-unicorn-156050.netlify.app
 
+media_folder: "content/uploads"
+public_folder: "/content/uploads"
+
 collections:
   - name: "publications"
     label: "Publications"
