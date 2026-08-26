@@ -34,7 +34,7 @@
     },
     {
       "id": "test1",
-      "issue": "test",
+      "issue": "Issue 15",
       "title": "test",
       "date": "test",
       "summary": "test",
@@ -67,12 +67,12 @@
       "body": "Full article content goes here."
     },
     {
-      "id": "Test article",
-      "title": "test article",
-      "category": "careers",
-      "author": "robert",
-      "read_time": "5 mins",
-      "body": "The precedent of US involvement in Vietnam started with President Truman’s decision in 1950 to provide the French with $g to defend the country as creating a ‘vital interest’, which left the ‘prestige and credibility’ of the US resting on the survival of South Vietnam.  NSAM 273 is the clearest piece of primary johnson inherited from Kennedy and chose to keep until 1966 – before the assassination of Kennedy, suggesting that the language was inherited and Johnson simply fulfilled the legacy of his deceased predecessor.  One ought to additionally recognise that the structural weight of this commitment was material, not simply rhetorical: by the time Lyndon Johnson was sworn in, the US had 16,732 military personnel in Vietnam and had committed billions in aid. "
+      "id": "test",
+      "title": "test",
+      "category": "test",
+      "author": "test",
+      "read_time": "4 mins",
+      "body": "test"
     }
   ]
 }
