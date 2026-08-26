@@ -31,6 +31,14 @@
       "date": "26 September 2026",
       "summary": "Everything happening this semester, plus how to get involved with the committee.",
       "body": "Full newsletter content goes here."
+    },
+    {
+      "id": "test1",
+      "issue": "test",
+      "title": "test",
+      "date": "test",
+      "summary": "test",
+      "body": "the french connectino opening the channel tunnel in 1943 was insane innit"
     }
   ],
   "articles": [
