@@ -1,0 +1,67 @@
+{
+  "events": [
+    {
+      "id": "vacation-scheme-prep",
+      "title": "Vacation Scheme Prep",
+      "category": "Workshop",
+      "date": "2026-08-10",
+      "time": "5:00 PM",
+      "location": "Old College, Room G4",
+      "description": "Application workshop ahead of autumn deadlines."
+    },
+    {
+      "id": "welcome-social",
+      "title": "Welcome Social",
+      "category": "Networking",
+      "date": "2026-08-20",
+      "time": "6:00 PM",
+      "location": "The Signet Library",
+      "description": "Freshers' meet-and-greet with the committee."
+    },
+    {
+      "id": "firm-insight-ashcombe",
+      "title": "Firm Insight: Ashcombe LLP",
+      "category": "Panel",
+      "date": "2026-08-22",
+      "time": "6:00 PM",
+      "location": "Playfair Library",
+      "description": "Associates walked through a live deal timeline."
+    },
+    {
+      "id": "manda-panel",
+      "title": "Careers in M&A: Panel with Magic Circle Associates",
+      "category": "Panel",
+      "date": "2026-10-14",
+      "time": "6:00 PM",
+      "location": "Playfair Library",
+      "description": "Full event content goes here."
+    },
+    {
+      "id": "pe-workshop",
+      "title": "Introduction to Private Equity Workshop",
+      "category": "Workshop",
+      "date": "2026-10-21",
+      "time": "5:30 PM",
+      "location": "Old College, Room G4",
+      "description": "Full event content goes here."
+    },
+    {
+      "id": "networking-night",
+      "title": "Networking Night with Sponsor Firms",
+      "category": "Networking",
+      "date": "2026-11-04",
+      "time": "7:00 PM",
+      "location": "The Signet Library",
+      "description": "Full event content goes here."
+    },
+    {
+      "id": "term-sheet-workshop",
+      "title": "Drafting a Term Sheet: Hands-On Workshop",
+      "category": "Workshop",
+      "date": "2026-11-18",
+      "time": "5:00 PM",
+      "location": "Old College, Room G4",
+      "description": "Full event content goes here."
+    }
+  ]
+}

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Join — Edinburgh University Transactional Law Society</title>
+<title>Event — Edinburgh University Transactional Law Society</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -256,11 +256,11 @@ a.nl-item { display:flex; }
     </div>
     <nav class="links" id="navLinks">
       <a href="/index.html">Home</a>
-      <a href="/events.html">Events</a>
+      <a href="/events.html" class="active">Events</a>
       <a href="/leadership.html">Leadership</a>
       <a href="/publications.html">Publications</a>
       <a href="/contact.html">Contact</a>
-      <a href="/join.html" class="active">Join</a>
+      <a href="/join.html">Join</a>
     </nav>
     <a href="/join.html" class="join-btn">Join us</a>
     <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
@@ -269,28 +269,49 @@ a.nl-item { display:flex; }
   </div>
 </header>
 
-<div class="join-hero wrap">
-  <div class="eyebrow">Membership</div>
-  <h1>Join the society — free, and open to all students.</h1>
-  <p>Membership gets you into every event, onto the weekly newsletter list, and access to publish your own articles.</p>
-</div>
-
-<div class="join-layout wrap">
-  <div class="perks-list">
-    <div class="perk"><div class="perk-icon">1</div><div><h4>Free forever</h4><p>No membership fee — the society is funded by our sponsor firms, not member dues.</p></div></div>
-    <div class="perk"><div class="perk-icon">2</div><div><h4>Weekly newsletter</h4><p>You'll be added to the mailing list as soon as you sign up — deal news and career tips, every week.</p></div></div>
-    <div class="perk"><div class="perk-icon">3</div><div><h4>Event access</h4><p>Priority booking for panels, workshops, and networking nights with sponsor firms.</p></div></div>
-    <div class="perk"><div class="perk-icon">4</div><div><h4>Write for us</h4><p>Pitch and publish your own articles on the Publications page once you're a member.</p></div></div>
-  </div>
-
-  <div class="form-card">
-    <h3>Sign up</h3>
-    <div class="sub">Takes under a minute. You'll get a confirmation email straight away.</div>
-    <div style="border-radius:6px; overflow:hidden; border:1px solid var(--line);">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeFcUQ0MkVJySj9S6mBktqbNzLzCMM9cgdvfDzcNfCdwXzxvw/viewform?embedded=true" width="100%" height="920" frameborder="0" marginheight="0" marginwidth="0" style="border:none; display:block;">Loading…</iframe>
-    </div>
+<div class="detail-head wrap">
+  <a href="/events.html" class="detail-back">← Back to Events</a>
+  <div class="eyebrow" id="ev-cat"></div>
+  <h1 id="ev-title" style="font-size:34px;"></h1>
+  <div class="detail-meta-row">
+    <span id="ev-date"></span>
+    <span>·</span>
+    <span id="ev-time"></span>
+    <span>·</span>
+    <span id="ev-location"></span>
   </div>
 </div>
+
+<div class="detail-body" id="ev-body">
+  <p>Loading…</p>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get('id');
+
+  fetch('/content/events.json?v=' + Date.now(), { cache: 'no-store' })
+    .then(r => r.json())
+    .then(data => {
+      const ev = (data.events || []).find(e => e.id === id);
+      if (!ev) {
+        document.getElementById('ev-title').textContent = 'Event not found';
+        document.getElementById('ev-body').innerHTML = '<p>This event may have been removed. <a href="/events.html">Browse all events →</a></p>';
+        return;
+      }
+      const d = new Date(ev.date);
+      document.title = ev.title + ' — Edinburgh University Transactional Law Society';
+      document.getElementById('ev-cat').textContent = ev.category;
+      document.getElementById('ev-title').textContent = ev.title;
+      document.getElementById('ev-date').textContent = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+      document.getElementById('ev-time').textContent = ev.time;
+      document.getElementById('ev-location').textContent = ev.location;
+      document.getElementById('ev-body').innerHTML = `<p>${ev.description}</p>`;
+    })
+    .catch(() => {
+      document.getElementById('ev-body').innerHTML = '<p>Could not load this event right now.</p>';
+    });
+</script>
 
 <footer>
   <div class="wrap">
