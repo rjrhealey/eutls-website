@@ -245,6 +245,7 @@ a.nl-item { display:flex; }
 
 </style>
 
+<script defer type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "8230e5f3593f4007ab31b7d500891e15"}'></script>
 </head>
 <body>
 
@@ -273,60 +274,33 @@ a.nl-item { display:flex; }
   <div class="wrap">
     <div class="eyebrow">The committee</div>
     <h1>Leadership</h1>
-    <p>Run entirely by students, for students — the committee behind every event, newsletter, and partnership.</p>
+    <p>Run entirely by students, for students: the committee behind every event, newsletter, and partnership.</p>
   </div>
 </div>
 
-<div class="team-grid wrap">
-  <div class="profile-card no-photo">
-    <div class="profile-body">
-      <div class="profile-role">President</div>
-      <div class="profile-name">Full Name</div>
-      <div class="profile-bio">4th year Law student. Oversees strategy, sponsor relations, and the committee.</div>
-      <a class="profile-link" href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn →</a>
-    </div>
-  </div>
-  <div class="profile-card no-photo">
-    <div class="profile-body">
-      <div class="profile-role">Vice President</div>
-      <div class="profile-name">Full Name</div>
-      <div class="profile-bio">3rd year Law student. Leads events programming and member engagement.</div>
-      <a class="profile-link" href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn →</a>
-    </div>
-  </div>
-  <div class="profile-card no-photo">
-    <div class="profile-body">
-      <div class="profile-role">Treasurer</div>
-      <div class="profile-name">Full Name</div>
-      <div class="profile-bio">3rd year Law student. Manages budget, sponsorship funds, and finances.</div>
-      <a class="profile-link" href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn →</a>
-    </div>
-  </div>
-  <div class="profile-card no-photo">
-    <div class="profile-body">
-      <div class="profile-role">Head of Publications</div>
-      <div class="profile-name">Full Name</div>
-      <div class="profile-bio">2nd year Law student. Edits the newsletter and member-written articles.</div>
-      <a class="profile-link" href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn →</a>
-    </div>
-  </div>
-  <div class="profile-card no-photo">
-    <div class="profile-body">
-      <div class="profile-role">Head of Marketing</div>
-      <div class="profile-name">Full Name</div>
-      <div class="profile-bio">2nd year Law student. Runs social media and society-wide promotion.</div>
-      <a class="profile-link" href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn →</a>
-    </div>
-  </div>
-  <div class="profile-card no-photo">
-    <div class="profile-body">
-      <div class="profile-role">Events Officer</div>
-      <div class="profile-name">Full Name</div>
-      <div class="profile-bio">1st year Law student. Coordinates logistics for panels and workshops.</div>
-      <a class="profile-link" href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn →</a>
-    </div>
-  </div>
+<div class="team-grid wrap" id="team-slot">
+  <p style="color:var(--text-soft);">Loading…</p>
 </div>
+
+<script>
+  fetch('/content/leadership.json?v=' + Date.now(), { cache: 'no-store' })
+    .then(r => r.json())
+    .then(data => {
+      const members = data.members || [];
+      document.getElementById('team-slot').innerHTML = members.map(m => `
+        <div class="profile-card no-photo">
+          <div class="profile-body">
+            <div class="profile-role">${m.role}</div>
+            <div class="profile-name">${m.name}</div>
+            <div class="profile-bio">${m.bio}</div>
+            <a class="profile-link" href="${m.linkedin}" target="_blank" rel="noopener">LinkedIn →</a>
+          </div>
+        </div>`).join('');
+    })
+    .catch(() => {
+      document.getElementById('team-slot').innerHTML = '<p style="color:var(--text-soft);">Could not load the committee right now.</p>';
+    });
+</script>
 
 <footer>
   <div class="wrap">

@@ -34,6 +34,55 @@ media_folder: "eutls-site/content/uploads"
 public_folder: "/content/uploads"
 
 collections:
+  - name: "homepage"
+    label: "Homepage Settings"
+    files:
+      - file: "eutls-site/content/homepage.json"
+        label: "Homepage Settings"
+        name: "homepage"
+        fields:
+          - {label: "Show membership/event/sponsor stats banner", name: "show_stats", widget: "boolean", default: false}
+          - label: "Stats (only shown if the toggle above is on)"
+            name: "stats"
+            widget: "list"
+            fields:
+              - {label: "Number", name: "number", widget: "string"}
+              - {label: "Label", name: "label", widget: "string"}
+          - {label: "Featured newsletter ID (must match an ID in Publications)", name: "featured_newsletter_id", widget: "string"}
+          - label: "Featured article IDs (must match IDs in Publications)"
+            name: "featured_article_ids"
+            widget: "list"
+            field: {label: "Article ID", name: "id", widget: "string"}
+  - name: "sponsors"
+    label: "Sponsors"
+    files:
+      - file: "eutls-site/content/sponsors.json"
+        label: "Sponsors"
+        name: "sponsors"
+        fields:
+          - label: "Sponsors"
+            name: "sponsors"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - {label: "Sponsor name", name: "name", widget: "string"}
+  - name: "leadership"
+    label: "Leadership"
+    files:
+      - file: "eutls-site/content/leadership.json"
+        label: "Committee members"
+        name: "leadership"
+        fields:
+          - label: "Committee members"
+            name: "members"
+            widget: "list"
+            summary: "{{fields.role}} — {{fields.name}}"
+            fields:
+              - {label: "ID (unique, no spaces)", name: "id", widget: "string"}
+              - {label: "Role", name: "role", widget: "string"}
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Bio", name: "bio", widget: "text"}
+              - {label: "LinkedIn URL", name: "linkedin", widget: "string"}
   - name: "events"
     label: "Events"
     files:
@@ -48,7 +97,7 @@ collections:
             fields:
               - {label: "ID (unique, no spaces)", name: "id", widget: "string"}
               - {label: "Title", name: "title", widget: "string"}
-              - {label: "Category", name: "category", widget: "select", options: ["Panel", "Workshop", "Networking"]}
+              - {label: "Category", name: "category", widget: "select", options: ["Panel", "Workshop", "Networking", "Social"]}
               - {label: "Date", name: "date", widget: "date", date_format: "YYYY-MM-DD", picker_utc: true}
               - {label: "Time", name: "time", widget: "string"}
               - {label: "Location", name: "location", widget: "string"}

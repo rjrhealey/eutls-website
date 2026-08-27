@@ -245,6 +245,7 @@ a.nl-item { display:flex; }
 
 </style>
 
+<script defer type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "8230e5f3593f4007ab31b7d500891e15"}'></script>
 </head>
 <body>
 
@@ -295,7 +296,7 @@ a.nl-item { display:flex; }
         document.getElementById('pub-body').innerHTML = '<p>This item may have been removed. <a href="/publications.html">Browse Publications →</a></p>';
         return;
       }
-      document.title = item.title + ' — Edinburgh University Transactional Law Society';
+      document.title = item.title + ' · Edinburgh University Transactional Law Society';
       document.getElementById('pub-title').textContent = item.title;
       if (type === 'newsletter') {
         document.getElementById('pub-cat').textContent = item.issue;

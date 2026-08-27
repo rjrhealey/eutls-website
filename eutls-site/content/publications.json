@@ -1,62 +1,22 @@
 {
   "newsletters": [
     {
-      "id": "issue-14",
-      "issue": "Issue 14",
-      "title": "This Week in Transactional Law",
-      "date": "17 October 2026",
-      "summary": "A round-up of the biggest UK deals this week, plus three tips for first-year vacation scheme applications.",
-      "body": "Full newsletter content goes here."
-    },
-    {
-      "id": "issue-13",
-      "issue": "Issue 13",
-      "title": "Private Equity Special",
-      "date": "10 October 2026",
-      "summary": "A deep dive into how PE deals get structured, from LBOs to exit strategy.",
-      "body": "Full newsletter content goes here."
-    },
-    {
-      "id": "issue-12",
-      "issue": "Issue 12",
-      "title": "Vacation Scheme Deadlines",
-      "date": "3 October 2026",
-      "summary": "Key application deadlines for this autumn, plus advice from last year's cohort.",
-      "body": "Full newsletter content goes here."
-    },
-    {
-      "id": "issue-11",
-      "issue": "Issue 11",
-      "title": "Welcome Back Edition",
-      "date": "26 September 2026",
-      "summary": "Everything happening this semester, plus how to get involved with the committee.",
-      "body": "Full newsletter content goes here."
+      "id": "test-newsletter",
+      "issue": "TEST",
+      "title": "TEST: Newsletter Example",
+      "date": "TEST",
+      "summary": "This is a test placeholder newsletter. Not a real issue.",
+      "body": "This is a test placeholder newsletter. Not a real issue."
     }
   ],
   "articles": [
     {
-      "id": "deal-team",
-      "title": "What Actually Happens on a Deal Team",
-      "category": "Careers",
-      "author": "Full Name",
-      "read_time": "5 min read",
-      "body": "Full article content goes here."
-    },
-    {
-      "id": "earn-outs",
-      "title": "Explaining Earn-Outs in Plain English",
-      "category": "Explainer",
-      "author": "Full Name",
-      "read_time": "4 min read",
-      "body": "Full article content goes here."
-    },
-    {
-      "id": "trainee-interview",
-      "title": "A Trainee's First Six Months in M&A",
-      "category": "Interview",
-      "author": "Full Name",
-      "read_time": "6 min read",
-      "body": "Full article content goes here."
+      "id": "test-article",
+      "title": "TEST: Article Example",
+      "category": "TEST",
+      "author": "TEST",
+      "read_time": "TEST",
+      "body": "This is a test placeholder article. Not a real article."
     }
   ]
 }

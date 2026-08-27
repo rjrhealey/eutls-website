@@ -245,6 +245,7 @@ a.nl-item { display:flex; }
 
 </style>
 
+<script defer type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "8230e5f3593f4007ab31b7d500891e15"}'></script>
 </head>
 <body>
 
@@ -300,7 +301,7 @@ a.nl-item { display:flex; }
         return;
       }
       const d = new Date(ev.date);
-      document.title = ev.title + ' — Edinburgh University Transactional Law Society';
+      document.title = ev.title + ' · Edinburgh University Transactional Law Society';
       document.getElementById('ev-cat').textContent = ev.category;
       document.getElementById('ev-title').textContent = ev.title;
       document.getElementById('ev-date').textContent = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });

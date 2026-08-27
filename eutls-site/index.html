@@ -245,6 +245,7 @@ a.nl-item { display:flex; }
 
 </style>
 
+<script defer type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "8230e5f3593f4007ab31b7d500891e15"}'></script>
 </head>
 <body>
 
@@ -272,9 +273,8 @@ a.nl-item { display:flex; }
 <section class="hero">
   <div class="hero-inner">
     <div>
-      <div class="eyebrow">University of Edinburgh</div>
-      <h1>Where deals get<br>studied, not just cases.</h1>
-      <p>The Transactional Law Society connects students with the practice of commercial law — through events, member-written articles, and a weekly newsletter from the industry.</p>
+      <h1>Start your legal career here.</h1>
+      <p>The Transactional Law Society connects students with the practice of commercial law, through events, member-written articles, and a weekly newsletter.</p>
       <div class="hero-ctas">
         <a href="/join.html" class="btn-primary">Become a member</a>
         <a href="/events.html" class="btn-secondary">See upcoming events</a>
@@ -288,12 +288,8 @@ a.nl-item { display:flex; }
 
 <div class="mission-strip">
   <div class="wrap">
-    <p class="quote">"We exist to give Edinburgh students a genuine window into commercial and transactional law — before they ever set foot in a firm."</p>
-    <div class="mission-stats">
-      <div><div class="stat-num">450+</div><div class="stat-label">Members</div></div>
-      <div><div class="stat-num">30+</div><div class="stat-label">Events / year</div></div>
-      <div><div class="stat-num">12</div><div class="stat-label">Sponsor firms</div></div>
-    </div>
+    <p class="quote" id="quote-text">We exist to give Edinburgh students a genuine window into commercial and transactional law, before they ever set foot in a firm.</p>
+    <div class="mission-stats" id="stats-slot" style="display:none;"></div>
   </div>
 </div>
 
@@ -303,34 +299,20 @@ a.nl-item { display:flex; }
       <h2>Upcoming events</h2>
       <a href="/events.html" class="view-all">View all events →</a>
     </div>
-    <a class="event-row" href="event.html?id=manda-panel">
-      <div class="event-date"><span class="day">14</span><span class="mon">Oct</span></div>
-      <div><div class="event-title">Careers in M&amp;A: Panel with Magic Circle Associates</div><div class="event-meta">6:00 PM · Playfair Library</div></div>
-      <div class="event-tag">Panel</div>
-      <div class="event-cta">Details →</div>
-    </a>
-    <a class="event-row" href="event.html?id=pe-workshop">
-      <div class="event-date"><span class="day">21</span><span class="mon">Oct</span></div>
-      <div><div class="event-title">Introduction to Private Equity Workshop</div><div class="event-meta">5:30 PM · Old College, Room G4</div></div>
-      <div class="event-tag">Workshop</div>
-      <div class="event-cta">Details →</div>
-    </a>
-    <a class="event-row" href="event.html?id=networking-night">
-      <div class="event-date"><span class="day">04</span><span class="mon">Nov</span></div>
-      <div><div class="event-title">Networking Night with Sponsor Firms</div><div class="event-meta">7:00 PM · The Signet Library</div></div>
-      <div class="event-tag">Networking</div>
-      <div class="event-cta">Details →</div>
-    </a>
+    <div id="home-events-slot">
+      <p style="color:var(--text-soft); padding:20px 0;">Loading…</p>
+    </div>
   </div>
 </section>
 
 <section style="padding-top:0;">
   <div class="wrap">
     <div class="section-head"><h2>Why join</h2></div>
-    <div class="why-grid">
-      <div class="why-card"><div class="why-num">01</div><h3>Direct industry access</h3><p>Panels, workshops, and networking nights with lawyers actually practising transactional law.</p></div>
-      <div class="why-card"><div class="why-num">02</div><h3>Weekly newsletter</h3><p>Curated deal news and career insight, straight to your inbox, free with membership.</p></div>
-      <div class="why-card"><div class="why-num">03</div><h3>Write and publish</h3><p>Contribute articles to our publications page and build a portfolio of legal writing.</p></div>
+    <div class="why-grid" style="grid-template-columns:repeat(2,1fr);">
+      <div class="why-card"><div class="why-num">01</div><h3>It's free</h3><p>Membership is free and gives access to all the society has to offer.</p></div>
+      <div class="why-card"><div class="why-num">02</div><h3>Industry access</h3><p>Learn about transactional law through panels, workshops and networking events.</p></div>
+      <div class="why-card"><div class="why-num">03</div><h3>Weekly newsletter</h3><p>Deal news, career insight and commercial awareness briefings, straight to your mailbox, free with membership.</p></div>
+      <div class="why-card"><div class="why-num">04</div><h3>Write and publish</h3><p>Contribute articles to our publications page, join our newsletter team, and build a portfolio of legal writing.</p></div>
     </div>
   </div>
 </section>
@@ -341,16 +323,8 @@ a.nl-item { display:flex; }
       <h2>From publications</h2>
       <a href="/publications.html" class="view-all">View all →</a>
     </div>
-    <div class="pub-grid">
-      <a class="pub-feature" href="publication.html?type=newsletter&id=issue-14" style="text-decoration:none; color:inherit;">
-        <div class="tag">Newsletter · Issue 14</div>
-        <h3>This Week in Transactional Law</h3>
-        <p>A round-up of the biggest UK deals, plus three tips for first-year vacation scheme applications.</p>
-      </a>
-      <div class="pub-side">
-        <a class="pub-mini" href="publication.html?type=article&id=deal-team" style="text-decoration:none; color:inherit;"><div class="tag">Article</div><h4>What Actually Happens on a Deal Team</h4></a>
-        <a class="pub-mini" href="publication.html?type=article&id=earn-outs" style="text-decoration:none; color:inherit;"><div class="tag">Article</div><h4>Explaining Earn-Outs in Plain English</h4></a>
-      </div>
+    <div class="pub-grid" id="home-pub-slot">
+      <p style="color:var(--text-soft); padding:20px 0;">Loading…</p>
     </div>
   </div>
 </section>
@@ -358,15 +332,86 @@ a.nl-item { display:flex; }
 <section class="sponsors">
   <div class="wrap">
     <div class="section-head" style="border:none; margin-bottom:24px;"><h2 style="font-size:20px;">Our sponsors</h2></div>
-    <div class="sponsor-row">
-      <div class="sponsor-mark">Firm & Co.</div>
-      <div class="sponsor-mark">Caledonia Legal</div>
-      <div class="sponsor-mark">Northgate Partners</div>
-      <div class="sponsor-mark">Ashcombe LLP</div>
-      <div class="sponsor-mark">Blackwood & Reid</div>
-    </div>
+    <div class="sponsor-row" id="sponsors-slot"></div>
   </div>
 </section>
+
+<script>
+  // Homepage settings: stats visibility + featured publications
+  fetch('/content/homepage.json?v=' + Date.now(), { cache: 'no-store' })
+    .then(r => r.json())
+    .then(cfg => {
+      if (cfg.show_stats && cfg.stats && cfg.stats.length) {
+        document.getElementById('stats-slot').style.display = '';
+        document.getElementById('stats-slot').innerHTML = cfg.stats.map(s => `
+          <div><div class="stat-num">${s.number}</div><div class="stat-label">${s.label}</div></div>`).join('');
+      }
+
+      fetch('/content/publications.json?v=' + Date.now(), { cache: 'no-store' })
+        .then(r => r.json())
+        .then(data => {
+          const nl = (data.newsletters || []).find(n => n.id === cfg.featured_newsletter_id);
+          const articles = (cfg.featured_article_ids || [])
+            .map(id => (data.articles || []).find(a => a.id === id))
+            .filter(Boolean);
+
+          let html = '';
+          if (nl) {
+            html += `
+              <a class="pub-feature" href="publication.html?type=newsletter&id=${nl.id}" style="text-decoration:none; color:inherit;">
+                <div class="tag">Newsletter · ${nl.issue}</div>
+                <h3>${nl.title}</h3>
+                <p>${nl.summary}</p>
+              </a>`;
+          }
+          if (articles.length) {
+            html += '<div class="pub-side">' + articles.map(a => `
+              <a class="pub-mini" href="publication.html?type=article&id=${a.id}" style="text-decoration:none; color:inherit;"><div class="tag">Article</div><h4>${a.title}</h4></a>`).join('') + '</div>';
+          }
+          document.getElementById('home-pub-slot').innerHTML = html || '<p style="color:var(--text-soft);">No featured publications set yet.</p>';
+        })
+        .catch(() => {});
+    })
+    .catch(() => {});
+
+  // Sponsors — same spacing whether populated or not
+  fetch('/content/sponsors.json?v=' + Date.now(), { cache: 'no-store' })
+    .then(r => r.json())
+    .then(data => {
+      const sponsors = data.sponsors || [];
+      document.getElementById('sponsors-slot').innerHTML = sponsors.map(s => `<div class="sponsor-mark">${s.name}</div>`).join('');
+    })
+    .catch(() => {});
+
+  // Upcoming events — pulled live from the Events page data, top 3 soonest
+  fetch('/content/events.json?v=' + Date.now(), { cache: 'no-store' })
+    .then(r => r.json())
+    .then(data => {
+      const today = new Date(); today.setHours(0,0,0,0);
+      let upcoming = (data.events || []).filter(e => new Date(e.date) >= today);
+      upcoming.sort((a,b) => new Date(a.date) - new Date(b.date));
+      upcoming = upcoming.slice(0, 3);
+
+      const slot = document.getElementById('home-events-slot');
+      if (!upcoming.length) {
+        slot.innerHTML = '<p style="color:var(--text-soft); padding:20px 0;">No upcoming events yet. Check back soon.</p>';
+        return;
+      }
+      slot.innerHTML = upcoming.map(e => {
+        const d = new Date(e.date);
+        const day = d.getDate();
+        const mon = d.toLocaleDateString('en-GB', { month: 'short' });
+        return `
+          <a class="event-row" href="event.html?id=${e.id}">
+            <div class="event-date"><span class="day">${day}</span><span class="mon">${mon}</span></div>
+            <div><div class="event-title">${e.title}</div><div class="event-meta">${e.time} · ${e.location}</div></div>
+            <div class="event-tag">${e.category}</div>
+            <div class="event-cta">Details →</div>
+          </a>`;
+      }).join('');
+    })
+    .catch(() => {});
+</script>
 
 <footer>
   <div class="wrap">

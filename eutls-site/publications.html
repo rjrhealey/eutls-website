@@ -245,6 +245,7 @@ a.nl-item { display:flex; }
 
 </style>
 
+<script defer type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "8230e5f3593f4007ab31b7d500891e15"}'></script>
 </head>
 <body>
 
@@ -271,9 +272,8 @@ a.nl-item { display:flex; }
 
 <div class="page-head">
   <div class="wrap">
-    <div class="eyebrow">Read</div>
     <h1>Publications</h1>
-    <p>Member-written articles and our weekly newsletter — the permanent record of everything the society produces.</p>
+    <p>Member-written articles and our weekly newsletter.</p>
   </div>
 </div>
 
@@ -314,7 +314,7 @@ a.nl-item { display:flex; }
 
       document.getElementById('nl-archive-slot').innerHTML = rest.map(n => `
         <a class="nl-item" href="publication.html?type=newsletter&id=${n.id}">
-          <div><div class="nl-item-title">${n.issue} — ${n.title}</div><div class="nl-item-date">${n.date}</div></div>
+          <div><div class="nl-item-title">${n.issue} · ${n.title}</div><div class="nl-item-date">${n.date}</div></div>
           <div class="nl-item-link">Read →</div>
         </a>`).join('');
 

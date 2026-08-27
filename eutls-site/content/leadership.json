@@ -1,0 +1,46 @@
+{
+  "members": [
+    {
+      "id": "president",
+      "role": "President",
+      "name": "Full Name",
+      "bio": "4th year Law student. Oversees strategy, sponsor relations, and the committee.",
+      "linkedin": "https://www.linkedin.com"
+    },
+    {
+      "id": "vice-president",
+      "role": "Vice President",
+      "name": "Full Name",
+      "bio": "3rd year Law student. Leads events programming and member engagement.",
+      "linkedin": "https://www.linkedin.com"
+    },
+    {
+      "id": "treasurer",
+      "role": "Treasurer",
+      "name": "Full Name",
+      "bio": "3rd year Law student. Manages budget, sponsorship funds, and finances.",
+      "linkedin": "https://www.linkedin.com"
+    },
+    {
+      "id": "head-publications",
+      "role": "Head of Publications",
+      "name": "Full Name",
+      "bio": "2nd year Law student. Edits the newsletter and member-written articles.",
+      "linkedin": "https://www.linkedin.com"
+    },
+    {
+      "id": "head-marketing",
+      "role": "Head of Marketing",
+      "name": "Full Name",
+      "bio": "2nd year Law student. Runs social media and society-wide promotion.",
+      "linkedin": "https://www.linkedin.com"
+    },
+    {
+      "id": "events-officer",
+      "role": "Events Officer",
+      "name": "Full Name",
+      "bio": "1st year Law student. Coordinates logistics for panels and workshops.",
+      "linkedin": "https://www.linkedin.com"
+    }
+  ]
+}
